@@ -6,19 +6,20 @@ using namespace std;
 
       int plusone(int array[],int n){
         int t;
-        t=array[n-1];
-        t++;
-        array[n-1]=t ;
-        std::cout << array[n-1] << '\n';
 
-        // for (int i = n; i<=n; i++) {
-        //   t=array[n-1];
-        //   t++;
-        //   array[n-1]=t ;
-        // }
-        // for (int i = 0; i <n; i++) {
-        //   std::cout << array[i] << '\n';
-        // }
+        // t=array[n-1];
+        // t++;                                      //this is of O(1),but it only print last number as array[n-1].
+        // array[n-1]=t ;
+        // std::cout << array[n-1] << '\n';
+
+        for (int i = n; i<=n; i++) {
+          t=array[n-1];
+          t++;
+          array[n-1]=t ;
+        }
+        for (int i = 0; i <n; i++) {
+          std::cout << array[i] << '\n';
+        }
       }
 
 int main(int argc, char const *argv[]) {
