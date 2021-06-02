@@ -11,10 +11,29 @@ using namespace std;
 
 bool check_anagram(string s,string t){
 
-  sort(s.begin(), s.end());
-	sort(t.begin(), t.end());
-		return s == t;
+  // sort(s.begin(), s.end());
+	// sort(t.begin(), t.end());
+	// 	return s == t;
 
+  if (s.length != t.length {
+    return false;
+  }
+  int count [256] ={0};
+
+  for (int i = 0; i <s.length; i++) {
+    count[s[i]]++;   // Counting occurence of evry character and incrementing Counting
+  }
+  for (int i = 0; i < s.length; i++) {
+    count[t[i]]--;  // if character matches from previous count we decrement its Counting
+
+  }
+
+for (int i = 0; i < 256; i++) {
+  if (count[i] !=0) {  // if count is not empty or zero its not anagram;
+    return false;
+  }
+  return true;
+}
 
 }
 
