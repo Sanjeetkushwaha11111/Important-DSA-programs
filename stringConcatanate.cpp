@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]) {
   cin.getline(s1,80);
   std::cout << "Enter 2nd String:" << '\n';
   cin.getline(s2,80);
-  strcat(s1,s2);
-  std::cout << "Concatnated string is: " << s2 << '\n';
+  strcat(s1,s2);   //this is function for string Concatnation it assign second string in 1st string.
+  std::cout << "Concatnated string is: " << s1 << '\n';
   return 0;
 }

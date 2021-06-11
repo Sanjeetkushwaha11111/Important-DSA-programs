@@ -1,18 +1,30 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <string.h>
 
+// A function to check if a string str is palindrome
+void isPalindrome(char str[])
+{
+	// Start from leftmost and rightmost corners of str
+	int l = 0;
+	int h = strlen(str) - 1;
 
-  void rev_String(string str) {
-      for (int i = str.length();i>=0; i--) {
-        std::cout << str[i];
-      }
-  }
+	// Keep comparing characters while they are same
+	while (h > l)
+	{
+		if (str[l++] != str[h--])
+		{
+			printf("%s is Not Palindrome", str);
+			return;
+		}
+	}
+	printf("%s is palindrome", str);
+}
 
-int main(int argc, char const *argv[]) {
-  char str[50];
-  std::cout << "Enter String:" << '\n';
-  cin.getline(str,50);
-  rev_String(str);
-
-  return 0;
+// Driver program to test above function
+int main()
+{
+	isPalindrome("abba");
+	isPalindrome("abbccbba");
+	isPalindrome("geeks");
+	return 0;
 }

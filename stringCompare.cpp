@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
   if (i==0) {
     std::cout << "Correct"<< '\n';
   } else {
-    std::cout << "Incorrect" <<s<< '\n';
+    std::cout << "Incorrect" << '\n';
   }
   return 0;
 }
