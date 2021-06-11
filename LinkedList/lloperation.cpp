@@ -106,28 +106,28 @@ void deleteAtTail(node *&head)
 }
 //<<<<--------------------------------------------->>>>>>>>>
 
-void deleteAtMiddle(node *&head, int pos)
-{
-  node*temp=head;
-  node*prev;
-
-  if (head==NULL) {
-    return;
-    }else if (pos==0) {
-    head=temp->next;
-    delete temp;
-    return;
-  } else {
-    int jump=1;
-       while (jump<pos-1) {
-         temp=temp->next;
-         jump=jump+1;
-       }
-       head->next=temp->next;
-      delete prev;
-      return;
-  }
-}
+// void deleteAtMiddle(node *&head, int pos)
+// {
+//   node*temp=head;
+//   node*prev;
+//
+//   if (head==NULL) {
+//     return;
+//     }else if (pos==0) {
+//     head=temp->next;
+//     delete temp;
+//     return;
+//   } else {
+//     int jump=1;
+//        while (jump<pos-1) {
+//          temp=temp->next;
+//          jump=jump+1;
+//        }
+//        head->next=temp->next;
+//       delete prev;
+//       return;
+//   }
+// }
 
 //<<<<--------------------------------------------->>>>>>>>>
 
@@ -155,9 +155,9 @@ int main(int argc, char const *argv[])
   insertAtTail(head, 77);
    print(head);
    std::cout << "After Deletion" << '\n';
-  // deleteAtHead(head);
-  deleteAtMiddle(head,5);
-  // deleteAtTail(head);
+   deleteAtHead(head);
+  //deleteAtMiddle(head,5);
+   deleteAtTail(head);
 
   print(head);
   return 0;
