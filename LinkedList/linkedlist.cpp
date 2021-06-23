@@ -29,6 +29,7 @@ void print(node*head){
     std::cout << head-> data <<"->";
     head=head->next;
   }
+  std::cout << "null" << '\n';
 }
 int main(int argc, char const *argv[]) {
          node*head=NULL;
