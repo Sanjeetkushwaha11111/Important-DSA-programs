@@ -18,7 +18,7 @@ using namespace std;
                }
        }
        for (i = 0; i < max; i++) {
-         std::cout << array[i] << '\n';
+         std::cout << array[i] << '\t';
        }
        return 0;
 
@@ -35,6 +35,7 @@ std::cin >> m;
 for (int i = 0; i < m; i++) {
   std::cin >> arr2[i];
 }
+std::cout << "Merge Sorted Array is" << '\n';
 
   mergeSortedArray(arr1,arr2,n,m);
 

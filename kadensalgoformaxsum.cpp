@@ -11,6 +11,7 @@ int maxsum(int array[],int n){
     cs=0;
   }
   }
+  std::cout << ms << '\n';
   return ms;
 }
 

@@ -18,7 +18,9 @@ using namespace std;
 int main(int argc, char const *argv[]) {
   int n;
   int array[50];
+  std::cout << "Enter array size:" << '\n';
   std::cin >> n;
+  std::cout << "Enter array element:." << '\n';
   for (int i = 0; i <n; i++) {
     std::cin >> array[i];
   }
