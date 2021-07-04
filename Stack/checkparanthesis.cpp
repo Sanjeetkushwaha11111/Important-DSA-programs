@@ -30,6 +30,8 @@ bool balancedparanthesis(string expresion) {
              else if(curChar==']'){
                st.pop();
                 }
+                else
+                return false;
               }
               return st.empty();
             }
@@ -43,5 +45,5 @@ int main(int argc, char const *argv[]) {
 if (isValid==1) {
   std::cout << "paranthesis are balanced:" << '\n';
 }else
-  std::cout << "paranthesis is not balanced:" << '\n';
+std::cout << "Invalid Input or paranthesis not balanced." << '\n';
 }
