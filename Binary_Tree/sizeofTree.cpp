@@ -26,16 +26,6 @@ node*buildTree(){
   return root;
 }
 
-
-//returns size of the tree by visiting left and right node recursivly
-
-int sizeofTree(node*root){
-  if (root==NULL) {
-    return 0;
-  }
-  return 1+sizeofTree(root->left)+sizeofTree(root->right);
-}
-
 //returns height of the tree by visiting left and right node recursivly
 
 int height(node*root){
@@ -67,8 +57,6 @@ void print(node*root) {
 int main(int argc, char const *argv[]) {
   node*root=buildTree();
   print(root);
-  std::cout <<"\n"<<" size of Tree: "<< sizeofTree(root) << '\n';
-
   std::cout <<"\n"<<" height of Tree: "<< height(root) << '\n';
 
   return 0;

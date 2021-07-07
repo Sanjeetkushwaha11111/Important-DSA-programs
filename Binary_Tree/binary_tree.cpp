@@ -27,8 +27,8 @@ public:
   node(int d){
     data=d;
     //initially left and right node of tree is null
-    left=NULL;
-    right=NULL;
+    left==NULL;
+    right==NULL;
   }
 };
 

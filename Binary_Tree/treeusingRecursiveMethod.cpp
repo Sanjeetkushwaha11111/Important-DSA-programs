@@ -19,17 +19,17 @@ node*buildTree(){
   std::cout << "Enter root" << '\n';
   int d;
   std::cin >> d;
-  if (d==-1) {       // if user enter -1 means return back to root
+  if (d==-1) {       // if user enter -1, return back to root
                   // i.e., no further expansion of nodes
     return NULL;
   }
   //other wise
   node*root=new node(d);
   std::cout << "Enter Left node" << '\n';
-  root->left=buildTree();                        //recursive call left node and add nodes to it, when encounter -1 return back to root
+  root->left=buildTree();                        //recursive call left node and add nodes to it, whenever encounter -1 return back to root
 
   std::cout << "Enter right node:" << '\n';
-  root->right=buildTree();                       //recursive call right node and add nodes to it, when encounter -1 return back to root
+  root->right=buildTree();                       //recursive call right node and add nodes to it, whenever encounter -1 return back to root
 
   return root;                                   //in the last return root when no nodes left to be add
 }
@@ -43,6 +43,8 @@ void printInorder(node*root) {
   printInorder(root->left);          //make recursive call for printing for left nodes
 
   printInorder(root->right);        //make recursive call for printing for right nodes.
+  std::cout <<'\n';
+
 }
 
 //Inorder traversal of tree
@@ -50,6 +52,7 @@ void printPreOrder(node*root) {
   if (root==NULL) {
     return;
   }
+  std::cout <<'\n';
   printPreOrder(root->left);
   std::cout << root->data <<" , ";
   printPreOrder(root->right);
@@ -60,6 +63,7 @@ void printPreOrder(node*root) {
   if (root==NULL) {
     return;
   }
+  std::cout <<'\n';
   printPostOrder(root->left);
   printPostOrder(root->right);
   std::cout << root->data <<" ";

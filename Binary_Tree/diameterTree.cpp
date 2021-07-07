@@ -11,7 +11,6 @@ public:
     data=d;
     left=NULL;
     right=NULL;
-
   }
 };
 
@@ -19,7 +18,7 @@ node*buildTree(){
   int d;
   std::cin >> d;
   if (d==-1) {
-  return NULL;
+    return NULL;
   }
   node*root=new node(d);
   root->left=buildTree();
@@ -27,20 +26,35 @@ node*buildTree(){
   return root;
 }
 
-//returns nodes of the tree by visiting left and right node recursivly
-int noofNodes(node*root){
+int height(node*root){
   if (root==NULL) {
     return 0;
   }
-  return noofNodes(root->left)+noofNodes(root->right)+1;
+  int ls=height(root->left);
+  int rs=height(root->right);
+
+  return max(ls,rs)+1;
 }
 
 
-void printTree(node*root) {
+int diameter(node*root){
+  if (root==NULL) {
+    return 0;
+  }
+  int h1=height(root->left);
+  int h2=height(root->right);
+  int op1=h1+h2;
+  int op2=diameter(root->left);
+  int op3=diameter(root->right);
+
+  return max(op1, max(op2,op3));
+}
+
+void  printTree(node*root) {
   if (root==NULL) {
     return;
   }
-  std::cout << root->data <<" \n ";
+  std::cout << root->data << " ";
   printTree(root->left);
   printTree(root->right);
   return;
@@ -49,7 +63,6 @@ void printTree(node*root) {
 int main(int argc, char const *argv[]) {
   node*root=buildTree();
   printTree(root);
-  std::cout<<"no of nodes: " << noofNodes(root) << '\n';
-
+  std::cout << '\n'<< diameter(root) << '\n';
   return 0;
 }
