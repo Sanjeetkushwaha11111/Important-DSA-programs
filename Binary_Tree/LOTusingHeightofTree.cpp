@@ -27,7 +27,7 @@ public:
 
   node(int d){
     data=d;
-    left==NULL;
+    left=NULL;
     right=NULL;
   }
 };

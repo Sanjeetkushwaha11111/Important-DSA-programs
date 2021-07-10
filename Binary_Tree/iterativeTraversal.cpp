@@ -25,6 +25,10 @@ node*buildtree(){
   root->right=buildtree();
   return root;
 }
+// in iterativeTraversal of binary tree we uses stack DS
+// when start pushing left node of root
+// and whenever it en encounter with null it pop and print it and
+// pushed the right node of the following node
 
 void iterativeTraversal(node*root){
   //initializing stack st

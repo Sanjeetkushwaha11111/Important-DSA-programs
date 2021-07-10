@@ -43,8 +43,6 @@ void printInorder(node*root) {
   printInorder(root->left);          //make recursive call for printing for left nodes
 
   printInorder(root->right);        //make recursive call for printing for right nodes.
-  std::cout <<'\n';
-
 }
 
 //Inorder traversal of tree
@@ -52,7 +50,6 @@ void printPreOrder(node*root) {
   if (root==NULL) {
     return;
   }
-  std::cout <<'\n';
   printPreOrder(root->left);
   std::cout << root->data <<" , ";
   printPreOrder(root->right);
@@ -63,10 +60,10 @@ void printPreOrder(node*root) {
   if (root==NULL) {
     return;
   }
-  std::cout <<'\n';
   printPostOrder(root->left);
   printPostOrder(root->right);
   std::cout << root->data <<" ";
+
   return;
 }
 int main(int argc, char const *argv[]) {

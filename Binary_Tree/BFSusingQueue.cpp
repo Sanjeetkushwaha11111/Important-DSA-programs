@@ -61,9 +61,11 @@ void BFS(node*root){
          std::cout << f->data <<" ";
          q.pop();
 
+        // if left child exist push left
          if (f->left) {
            q.push(f->left);
          }
+         // if right child exist push ri
          if (f->right) {
            q.push(f->right);
          }
