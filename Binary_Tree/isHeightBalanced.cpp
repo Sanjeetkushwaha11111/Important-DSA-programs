@@ -26,6 +26,18 @@ node*buildTree(){
   return root;
 }
 
+bool isBST(node*root){
+  if (root==NULL) {
+    return false;
+
+  }
+  if (root->left->data < root->right->data) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // An empty tree is height-balanced. A non-empty binary tree T is balanced if:
 // 1) Left subtree of T is balanced
 // 2) Right subtree of T is balanced
@@ -79,6 +91,12 @@ void printTree(node*root){
   int main(int argc, char const *argv[]) {
   node*root=buildTree();
   //printTree(root);
+
+  if(isBST(root)) {
+    std::cout << "fffn" << '\n';
+  }
+  std::cout << "..." << '\n';
+
 
   if (isheightbalance(root).balance) {
   std::cout << "Tree is Height Balanced" << '\n';
