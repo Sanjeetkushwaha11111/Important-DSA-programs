@@ -92,12 +92,12 @@ void BFS(node*root){
 int main(int argc, char const *argv[]) {
 std::cout << "Enter nodes of tree p" << '\n';
   node*p=buildTree();
-//  BFS(p);
+BFS(p);
 
 
   std::cout<<"\n" << "Enter nodes of tree q" << '\n';
   node*q=buildTree();
-  //BFS(q);
+  BFS(q);
 
   if (sameTree(p,q)) {
     std::cout<<"\n" << "Trees are same." << '\n';

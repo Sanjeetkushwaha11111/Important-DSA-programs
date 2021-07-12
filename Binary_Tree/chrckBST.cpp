@@ -38,6 +38,8 @@ node*insertelement(){
   return root;
 }
 
+//incomplete
+
 
 bool isBST(node*root){
   if (root==NULL) {
