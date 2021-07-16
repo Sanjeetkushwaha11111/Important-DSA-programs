@@ -12,7 +12,7 @@ bool balancedparanthesis(string expresion) {
   stack<char> st;
   for (int i = 0; i <expresion.size(); ++i) {
     char curChar=expresion[i];
-    if (curChar=='(') {
+    if (curChar=='(') 
       st.push(curChar);
     }
     else if(curChar==')'){
