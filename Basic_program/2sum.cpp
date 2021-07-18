@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 // 2SUM
@@ -22,6 +22,8 @@ int twosum(int array[],int n,int t){
     }
     std::cout <<"["<< a <<" , "<< b<<"]";
   }
+
+
 
 int main(int argc, char const *argv[]) {
 

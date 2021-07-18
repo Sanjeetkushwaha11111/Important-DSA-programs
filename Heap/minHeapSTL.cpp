@@ -2,7 +2,11 @@
 using namespace std;
 int main(int argc, char const *argv[]) {
 
-  priority_queue<int,vector<int>,generator<int> > pq;
+
+  //minHeap implementation in STL
+  // it uses inbuilt function
+  // greater functon is used to compare two value and return the lower one
+  priority_queue<int,vector<int>,greater<int> > pq;
 
   int data;
   std::cin >> data;
