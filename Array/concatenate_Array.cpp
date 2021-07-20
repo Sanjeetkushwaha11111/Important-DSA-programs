@@ -6,7 +6,8 @@ void concat(vector<int> &v){
   std::vector<int> nums;
   nums=v;
   //nums.size()=nums.size()+4;
-  for (int i = 0; i <= v.size(); i++) {
+  for (int i = 0; i <=
+     v.size(); i++) {
       int d=v[i];
       nums.push_back(d);
   }
