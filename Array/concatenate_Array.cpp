@@ -2,20 +2,21 @@
 using namespace std;
 
 
-void concat(vector<int> &v){
-  std::vector<int> nums;
-  nums=v;
-  //nums.size()=nums.size()+4;
-  for (int i = 0; i <=
-     v.size(); i++) {
-      int d=v[i];
-      nums.push_back(d);
-  }
-  while (!nums.empty()) {
-    std::cout << nums.front() << '\n';
-    nums.pop_back();
-  }
-return ;
+void concat(vector<int> &ans){
+std::vector<int> v;
+for (int i = 0; i < ans.size() ; i++) {
+  ans.push_back(ans[i]);
+}
+//int n=v.size()+ans.size();
+// for (int i = 0; i < n ; i++) {
+//   v.push_back(ans[i]);
+// }
+
+for (int i = 0; i<ans.size(); i++) {
+  std::cout << ans[i] << '\n';
+  ans.pop_back();
+}
+return;
 
 }
 
