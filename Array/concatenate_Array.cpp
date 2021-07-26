@@ -2,19 +2,19 @@
 using namespace std;
 
 
-void concat(vector<int> &ans){
+void concat(vector<int> ans){
 std::vector<int> v;
 for (int i = 0; i < ans.size() ; i++) {
-  ans.push_back(ans[i]);
+  v.push_back(ans[i]);
 }
-//int n=v.size()+ans.size();
-// for (int i = 0; i < n ; i++) {
-//   v.push_back(ans[i]);
-// }
+int n=v.size()+ans.size();
+for (int i = 0; i < n ; i++) {
+  v.push_back(ans[i]);
+}
 
-for (int i = 0; i<ans.size(); i++) {
-  std::cout << ans[i] << '\n';
-  ans.pop_back();
+for (int i = 0; i<n ; i++) {
+  std::cout << v[i] << '\n';
+  v.pop_back();
 }
 return;
 
