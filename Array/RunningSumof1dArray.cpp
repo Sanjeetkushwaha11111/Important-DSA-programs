@@ -3,10 +3,10 @@ using namespace std;
 
 void sumOneD(std::vector<int> nums) {
   std::vector<int> v;
-
   for (int i = 0; i < nums.size(); i++) {
+    int sum=0;
     for (int j = i; j <=nums.size(); j++) {
-      int sum=sum+i;
+      int sum=sum[i];
       v.push_back(sum);
     }
   }
